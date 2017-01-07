@@ -15,7 +15,7 @@ describe("NewsView", function (){
 
   it("Displays the headlines", function () {
     console.log(news.headline);
-    expect(view.displayHeadlines(storyList)).toEqual("<li><a href=#0>My headline.</a></li>");
+    expect(view.displayHeadlines(storyList)).toEqual('<ul><li><div id="0"><a href=#0>My headline.</a></div></li></ul>');
   });
 
 });
