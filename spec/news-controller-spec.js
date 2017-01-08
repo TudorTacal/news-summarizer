@@ -16,13 +16,13 @@ describe("NewsController", function (){
     expect(controller instanceof NewsController).toEqual(true);
   });
 
-  it("uses the view to display the headlines", function (){
+  it("it uses the model to save the headlines and the view to display the headlines", function (){
     console.log(stories);
-    controller.createStory(stories);
+    controller.createHeadlines(stories);
     expect(document.getElementById('headlines').textContent).toEqual("My webtitle");
   });
 
+  it("makes calls to the Guardian API", function (){
 
-
-
+  });
 });

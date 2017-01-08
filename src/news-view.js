@@ -11,6 +11,13 @@
         var headLines = "<ul>"+output.join("")+"</ul>";
         document.getElementById('headlines').innerHTML = headLines;
         return headLines;
+      },
+
+      displaySummarySentences: function(sentences) {
+        for (var i = 0; i < sentences.length-1; i++) {
+          var summarySentences = "<p>" + sentences[i] + "</p>";
+          document.getElementById("story-summary").innerHTML += summarySentences;
+        }
       }
     };
     exports.NewsView = NewsView;
