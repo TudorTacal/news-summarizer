@@ -3,8 +3,8 @@ describe("NewsView", function (){
 
   beforeEach(function () {
     view = new NewsView();
-    news = jasmine.createSpyObj("storyList", ["headline"]);
-    news.headline = "My headline.";
+    news = jasmine.createSpyObj("news", ["webTitle"]);
+    news.webTitle= "My headline.";
     storyList = [];
     storyList.push(news);
     dummyDiv = document.createElement('div');

@@ -1,11 +1,12 @@
 describe("NewsModel",function (){
 
   var news = new NewsModel ();
-  var stories;
+  var story, stories;
 
   beforeEach(function (){
-    stories = jasmine.createSpy('stories');
-    stories.webTitle = "My news name";
+    story = jasmine.createSpy('story');
+    story.webTitle = "My news name";
+    stories = [story];
   });
 
   it ("Initializes new objects", function () {
@@ -18,11 +19,7 @@ describe("NewsModel",function (){
   });
 
   it("Gets a news title", function () {
-
-    news.save(stories);
-    news.getTitle(0);
     expect(news.getTitle(0)).toEqual("My news name");
-
   });
 
 });

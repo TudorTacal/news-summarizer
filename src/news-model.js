@@ -8,7 +8,7 @@
 
   NewsModel.prototype = {
     save: function (stories) {
-      this.storyList.push(stories);
+      this.storyList = stories;
     },
 
     getTitle: function (index) {
