@@ -36,15 +36,14 @@
     },
 
     aylienRequest: function (url) {
-      this.xhr.open("GET","http://news-summary-api.herokuapp.com/aylien?apiRequestUrl=https://api.aylien.com/api/v1/summarize?url=" + url, true);
+      this.xhr.open("GET", 'http://news-summary-api.herokuapp.com/aylien?apiRequestUrl=https://api.aylien.com/api/v1/summarize?url=' + url , true);
       this.xhr.send();
       self = this;
       this.xhr.onreadystatechange = function () {
-        if(this.readyState === 4 && this.status === 2) {
+        if(this.readyState === 4 && this.status === 200) {
           var newsSummary = JSON.parse(this.responseText);
           self.showSummary(newsSummary.sentences);
         }
-
       };
     },
     grabId: function() {
